@@ -1,0 +1,32 @@
+* {
+    cursor: none;
+}
+body {
+    font-family: "calibri", sans-serif;
+    text-rendering: optimizeLegibility;
+    font-weight: 100;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: non;
+}
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: #00FF00;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: none;
+    mix-blend-mode: difference;
+}
+.inner-cursor.grow {
+    width: 15px;
+    height: 15px;
+}
+.am-header nav {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 1) 0%, rgba(17, 24, 39, 0.5) 50%, rgba(17, 24, 39, 0) 100%);
+}

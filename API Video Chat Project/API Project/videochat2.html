@@ -1,0 +1,102 @@
+
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <!-- my css file-->
+    <link rel="stylesheet" type="text/css" href="videochat2.css">
+  <script src='https://meet.jit.si/external_api.js'></script>
+</head>
+<body>
+<div class="thebody text-center">
+<nav class="navbar navbar-dark" style="background-color:shd; box-shadow: 2px 4px rgba(226, 203, 242,0.5)">
+  <span class="navbar-brand" style="font-size: 40px; color:#9864bd">CREATING VIDEO CHAT USING API</span>
+</nav>
+
+
+
+
+
+<!DOCTYPE html>
+    <html>
+      <head>
+        <script src='https://8x8.vc/vpaas-magic-cookie-7f1bb9f930664733b117eaad3c797b13/external_api.js' async></script>
+        <style>html, body, #jaas-container { height: 100%; }</style>
+        <script type="text/javascript">
+          window.onload = () => {
+            const api = new JitsiMeetExternalAPI("8x8.vc", {
+              roomName: "vpaas-magic-cookie-7f1bb9f930664733b117eaad3c797b13/SampleAppGreatWellsFulfilTomorrow",
+              parentNode: document.querySelector('#jaas-container'),
+							// Make sure to include a JWT if you intend to record,
+							// make outbound calls or use any other premium features!
+							// jwt: "eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtN2YxYmI5ZjkzMDY2NDczM2IxMTdlYWFkM2M3OTdiMTMvYTVmYWUxLVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE2ODQyOTA4MTcsImV4cCI6MTY4NDI5ODAxNywibmJmIjoxNjg0MjkwODEyLCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtN2YxYmI5ZjkzMDY2NDczM2IxMTdlYWFkM2M3OTdiMTMiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwic2lwLW91dGJvdW5kLWNhbGwiOmZhbHNlLCJ0cmFuc2NyaXB0aW9uIjpmYWxzZSwicmVjb3JkaW5nIjpmYWxzZX0sInVzZXIiOnsiaGlkZGVuLWZyb20tcmVjb3JkZXIiOmZhbHNlLCJtb2RlcmF0b3IiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIiLCJpZCI6Imdvb2dsZS1vYXV0aDJ8MTE0ODczMzI0NTA3MjQxMTg5NzczIiwiYXZhdGFyIjoiIiwiZW1haWwiOiJ0ZXN0LnVzZXJAY29tcGFueS5jb20ifX0sInJvb20iOiIqIn0.As9G9iv_fggm0_bxAdukgmCvlrevHrxyVcz-nArc7pr8qAgY3vRmynaSrFq1muZ4u0mWJGf8-Hp275PNEz1BGSvg7EeqQgrvF4SPXUzBjp98uMhQXfiTupMS8qXx7-xDo7OvwNC4EmE7zpNjDjcVjU13ukeWxGGr1xPpcPeLWJh5rovRQkzEje6ll654WaazDFlx-Q8JXItblg2wCVC3lwroMk84vDO8T7DRuUsWL4j883ZfC9U1xvY4PfwpNdybCBx4IUFNG3bY4sEVBzZ1SZwFVVDjUnoM0j_Yr99QlVdaYP7XCIfBD48Vz925nrV4C2fUqWvfIjxQIQY4wyQzyg"
+            });
+          }
+        </script>
+      </head>
+      <body><div id="jaas-container" /></body>
+    </html>
+  
+
+
+
+
+
+
+
+<script>
+var button = document.querySelector('#start');
+var container = document.querySelector('#jitsi-container');
+var api = null;
+
+button.addEventListener('click', () => {
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var stringLength = 30;
+
+    function pickRandom() {
+    return possible[Math.floor(Math.random() * possible.length)];
+    }
+
+var randomString = Array.apply(null, Array(stringLength)).map(pickRandom).join('');
+
+    var domain = "meet.jit.si";
+    var options = {
+        "roomName": randomString,
+        "parentNode": container,
+        "width": 700,
+        "height": 700,
+    };
+    api = new JitsiMeetExternalAPI(domain, options);
+});
+
+</script>
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<button id="start" class="btn btn-light btn-lg" type="button"><b>Start a new meeting</b></button>
+</div>
+</div>
+
+
+
+<div id="jitsi-container" class="container align-items-center">
+</div>
+
+</div>
+
+</body>
+</html>

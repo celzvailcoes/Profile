@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator</title>
+  </head>
+  <body>
+    <h1>Generator</h1>
+    <p>Click the button to generate a random name:</p>
+    <button onclick="generateName()" class="button button1">Generate Name</button>
+    <p id="randomName"></p>
+    <script>
+      // Define arrays of first names and last names
+      var firstNames = ['Inventory', 'Flower Shop', 'Crime File Management', 'Emily', 'William', 'Sophia', 'David', 'Emma', 'Daniel', 'Olivia'];
+      var lastNames = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor'];
+      
+      function generateName() {
+        // Select a random first name and last name
+        var randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+        var randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+        
+        // Concatenate the first and last name to form a full name
+        var randomName = randomFirstName + ' ' + randomLastName;
+        
+        // Display the random name on the page
+        document.getElementById('randomName').innerHTML = randomName;
+      }
+    </script>
+  </body>
+</html>
